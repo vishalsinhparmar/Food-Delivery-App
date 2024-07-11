@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import RedchilliImg1 from '../../../assets/Order/icons8-chilli-96 2.png'
 import RedchilliImg2 from '../../../assets/Order/icons8-chilli-96 5.png'
 import axios from 'axios';
+import PizzaModal from '../PizzaModal';
 
 export default function CalzoneDetailCard() {
   const[data,setdata]=useState([]);
@@ -43,7 +44,7 @@ export default function CalzoneDetailCard() {
                               <p className='py-2 px-4 bg-green-700 text-white font-bold rounded-md'>&#8377;{item.Small_pricing}</p>
                           </div>
                            
-                          <div className='border p-2 flex items-baseline rounded-md hover:bg-slate-50'>
+                          <div className='border p-2 flex items-baseline rounded-md hover:bg-slate-50' onClick={PizzaModal}>
                               <p className='mr-5'>Medium </p>
                               <p className='py-2 px-4 bg-green-700 text-white font-bold rounded-md'>&#8377;{item.Medium_pricing}</p>                           
                           </div>
